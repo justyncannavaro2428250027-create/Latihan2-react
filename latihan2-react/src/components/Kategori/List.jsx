@@ -50,12 +50,12 @@ export default function List(){
 )
     return (
         <div>
-        <h2>List Fakultas</h2>
+        <h2>List Kategori</h2>
         <NavLink to='create' className="btn btn-primary wb-3 btn-sm">Create</NavLink>
         <table className="table table-striped">
         <thead>
             <tr>
-                <th>Nama Fakultas</th>
+                <th>Nama Kategori</th>
                 <th>Aksi</th>
             </tr>
         </thead>

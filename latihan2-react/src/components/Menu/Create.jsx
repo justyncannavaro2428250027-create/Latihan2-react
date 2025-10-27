@@ -22,7 +22,7 @@ export default function CreateProdi(){
         const fetchKategori = async () => {
             try {
                 const response = await axios.get(
-                    "https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/kategori"
+                    "https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/kategori"
                 );
                 setKategoriList(response.data); //Simpan data fakultas ke dalam state
             } catch (error) {
@@ -46,7 +46,7 @@ export default function CreateProdi(){
     try {
         //Melakukan HTTP POST request untuk menyimpan data prodi
         const response = await axios.post(
-            "https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/menu", //Endpoint API yang dituju
+            "https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/menu", //Endpoint API yang dituju
             {
                 nama: namaMenu, //Data nama prodi
                 kategori_id: kategoriId //Data id fakultas yang dipilih
@@ -55,7 +55,7 @@ export default function CreateProdi(){
         //Jika response HTTP status 201 (Created), berarti berhasil
         if(response.status === 201) {
             //Tampilkan pesan sukses jika prodi berhasil dibuat
-            setSuccess("Prodi Berhasil Dibuat");
+            setSuccess("Menu Berhasil Dibuat");
             setNamaMenu("") //Kosongkan input form setelah success di submit
             setKategoriId(""); //Kosongkan dropdown setelah success di submit
         } else {

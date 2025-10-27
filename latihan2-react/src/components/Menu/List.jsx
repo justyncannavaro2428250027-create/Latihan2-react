@@ -11,7 +11,7 @@ export default function List(){
     //panggil API Menu menggunakan useEffect dan axios
     useEffect( ()=> {
         axios
-        .get("https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/menu")
+        .get("https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/menu")
         .then((response) =>{
             console.log(response.data);
             setMenu(response.data);
@@ -30,7 +30,7 @@ export default function List(){
         }).then((result) => {
         if (result.isConfirmed) {
             //Lakukan Penghapusan jika di konfirmasi
-            axios.delete(`https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/menu/${id}`)
+            axios.delete(`https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/menu/${id}`)
             .then((response) => {
                 //Hapus Menu dari state setelah sukses dihapus dari server
                 setMenu(Menu.filter((Menu) => Menu.id !== id))

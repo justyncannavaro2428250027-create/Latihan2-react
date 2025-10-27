@@ -30,7 +30,7 @@ export default function Edit() {
     const handleSubmit = (e) => {
         e.preventDefault()
         axios
-        .patch(`https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/kategori/${id}`, {nama})
+        .patch(`https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/kategori/${id}`, {nama})
         .then( (response) => {
             navigate("/kategori")
         })

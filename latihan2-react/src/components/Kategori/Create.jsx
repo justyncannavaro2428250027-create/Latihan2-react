@@ -25,7 +25,7 @@ export default function CreateFakultas(){
     try {
         //Melakukan HTTP POST request untuk menyimpan data fakultas
         const response = await axios.post(
-            "https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/kategori", //Endpoint API yang dituju
+            "https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/kategori", //Endpoint API yang dituju
             {
                 nama: namaKategori, //Data yang dikirim berupa objek JSON dengan properti 'nama'
             }

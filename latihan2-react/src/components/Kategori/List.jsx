@@ -11,7 +11,7 @@ export default function List(){
     //panggil API Fakultas menggunakan useEffect dan axios
     useEffect( ()=> {
         axios
-        .get("https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/kategori")
+        .get("https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/kategori")
         .then((response) =>{
             console.log(response.data);
             setKategori(response.data);
@@ -21,7 +21,7 @@ export default function List(){
     const handleDelete = (id, nama) => (
         Swal.fire({
         title:"Are you sure?",
-        text: `You won't be able to revert this! Fakultas: ${nama}`,
+        text: `You won't be able to revert this! Kategori: ${nama}`,
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -30,7 +30,7 @@ export default function List(){
         }).then((result) => {
         if (result.isConfirmed) {
             //Lakukan Penghapusan jika di konfirmasi
-            axios.delete(`https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/kategori/${id}`)
+            axios.delete(`https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/kategori/${id}`)
             .then((response) => {
                 //Hapus Fakultas dari state setelah sukses dihapus dari server
                 setKategori(kategori.filter((kategori) => kategori.id !== id))

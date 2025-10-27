@@ -13,7 +13,7 @@ export default function Edit() {
     //Mengambil data prodi berdasarkan id ketika komponen pertama kali di muat
     useEffect( () => {
         axios
-        .get(`https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/menu/${id}`) //Mengirimkan request GET untuk mendapatkan data prodi berdasarkan id
+        .get(`https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/menu/${id}`) //Mengirimkan request GET untuk mendapatkan data prodi berdasarkan id
         .then( (response) => {
             setNama(response.data.nama)
             setKategori(response.data.kategori.id)
@@ -24,7 +24,7 @@ export default function Edit() {
         })
 
         axios
-        .get(`https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/kategori`) //Mengirimkan request GET untuk mendapatkan data prodi berdasarkan id
+        .get(`https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/kategori`) //Mengirimkan request GET untuk mendapatkan data prodi berdasarkan id
         .then( (response) => {
             setKategoriList(response.data)
         })
@@ -48,7 +48,7 @@ export default function Edit() {
     const handleSubmit = (e) => {
         e.preventDefault()
         axios
-        .patch(`https://apirestoran-5cpoj7wqf-justyns-projects-2b70edcb.vercel.app/api/api/menu/${id}`, {nama, fakultas_id: kategori})
+        .patch(`https://if-3-bweb-2-3jhi2cajq-justyns-projects-2b70edcb.vercel.app/api/api/menu${id}`, {nama, fakultas_id: kategori})
         .then( (response) => {
             navigate("/menu")
         })
